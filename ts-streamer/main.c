@@ -100,14 +100,14 @@ void onNewChannelEvent(uint64 serverConnectionHandlerID, uint64 channelID, uint6
     char* name;
     unsigned int error;
     
-    printf("onNewChannelEvent: %llu %llu %llu\n", (unsigned long long)serverConnectionHandlerID, (unsigned long long)channelID, (unsigned long long)channelParentID);
+    //printf("onNewChannelEvent: %llu %llu %llu\n", (unsigned long long)serverConnectionHandlerID, (unsigned long long)channelID, (unsigned long long)channelParentID);
     if((error = ts3client_getChannelVariableAsString(serverConnectionHandlerID, channelID, CHANNEL_NAME, &name)) == ERROR_ok) {
-        printf("New channel: %llu %s \n", (unsigned long long)channelID, name);
+        //printf("New channel: %llu %s \n", (unsigned long long)channelID, name);
         ts3client_freeMemory(name);  /* Release dynamically allocated memory only if function succeeded */
     } else {
         char* errormsg;
         if(ts3client_getErrorMessage(error, &errormsg) == ERROR_ok) {
-            printf("Error getting channel name in onNewChannelEvent: %s\n", errormsg);
+            //printf("Error getting channel name in onNewChannelEvent: %s\n", errormsg);
             ts3client_freeMemory(errormsg);
         }
     }
@@ -129,7 +129,7 @@ void onNewChannelCreatedEvent(uint64 serverConnectionHandlerID, uint64 channelID
     /* Query channel name from channel ID */
     if(ts3client_getChannelVariableAsString(serverConnectionHandlerID, channelID, CHANNEL_NAME, &name) != ERROR_ok)
         return;
-    printf("New channel created: %s \n", name);
+    //printf("New channel created: %s \n", name);
     ts3client_freeMemory(name);  /* Release dynamically allocated memory only if function succeeded */
 }
 
@@ -143,7 +143,7 @@ void onNewChannelCreatedEvent(uint64 serverConnectionHandlerID, uint64 channelID
  *   invokerName               - Name of the client who deleted the channel
  */
 void onDelChannelEvent(uint64 serverConnectionHandlerID, uint64 channelID, anyID invokerID, const char* invokerName, const char* invokerUniqueIdentifier) {
-    printf("Channel ID %llu deleted by %s (%u)\n", (unsigned long long)channelID, invokerName, invokerID);
+    //printf("Channel ID %llu deleted by %s (%u)\n", (unsigned long long)channelID, invokerName, invokerID);
 }
 
 /*
@@ -158,7 +158,7 @@ void onDelChannelEvent(uint64 serverConnectionHandlerID, uint64 channelID, anyID
  *                               Values: ENTER_VISIBILITY, RETAIN_VISIBILITY, LEAVE_VISIBILITY
  */
 void onClientMoveEvent(uint64 serverConnectionHandlerID, anyID clientID, uint64 oldChannelID, uint64 newChannelID, int visibility, const char* moveMessage) {
-    printf("ClientID %u moves from channel %llu to %llu with message %s\n", clientID, (unsigned long long)oldChannelID, (unsigned long long)newChannelID, moveMessage);
+    //printf("ClientID %u moves from channel %llu to %llu with message %s\n", clientID, (unsigned long long)oldChannelID, (unsigned long long)newChannelID, moveMessage);
 }
 
 /*
@@ -178,7 +178,7 @@ void onClientMoveSubscriptionEvent(uint64 serverConnectionHandlerID, anyID clien
     /* Query client nickname from ID */
     if(ts3client_getClientVariableAsString(serverConnectionHandlerID, clientID, CLIENT_NICKNAME, &name) != ERROR_ok)
         return;
-    printf("New client: %s \n", name);
+    //printf("New client: %s \n", name);
     ts3client_freeMemory(name);  /* Release dynamically allocated memory only if function succeeded */
 }
 
@@ -194,7 +194,7 @@ void onClientMoveSubscriptionEvent(uint64 serverConnectionHandlerID, anyID clien
  *   timeoutMessage            - Optional message giving the reason for the timeout
  */
 void onClientMoveTimeoutEvent(uint64 serverConnectionHandlerID, anyID clientID, uint64 oldChannelID, uint64 newChannelID, int visibility, const char* timeoutMessage) {
-    printf("ClientID %u timeouts with message %s\n", clientID, timeoutMessage);
+    //printf("ClientID %u timeouts with message %s\n", clientID, timeoutMessage);
 }
 
 /*
@@ -219,9 +219,9 @@ void onTalkStatusChangeEvent(uint64 serverConnectionHandlerID, int status, int i
     if(ts3client_getClientVariableAsString(serverConnectionHandlerID, clientID, CLIENT_NICKNAME, &name) != ERROR_ok)
         return;
     if(status == STATUS_TALKING) {
-        printf("Client \"%s\" starts talking.\n", name);
+        //printf("Client \"%s\" starts talking.\n", name);
     } else {
-        printf("Client \"%s\" stops talking.\n", name);
+        //printf("Client \"%s\" stops talking.\n", name);
     }
     ts3client_freeMemory(name);  /* Release dynamically allocated memory only if function succeeded */
 }
@@ -243,7 +243,7 @@ void onIgnoredWhisperEvent(uint64 serverConnectionHandlerID, anyID clientID) {
     if((error = ts3client_allowWhispersFrom(serverConnectionHandlerID, clientID)) != ERROR_ok) {
         printf("Error setting client on whisper allow list: %u\n", error);
     }
-    printf("Added client %d to whisper allow list\n", clientID);
+    //printf("Added client %d to whisper allow list\n", clientID);
 }
 
 void onServerErrorEvent(uint64 serverConnectionHandlerID, const char* errorMessage, unsigned int error, const char* returnCode, const char* extraMessage) {
