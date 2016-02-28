@@ -436,7 +436,7 @@ void onEditMixedPlaybackVoiceDataEvent(uint64 serverConnectionHandlerID, short* 
     if (fileMode) {
         fwrite(mp3_buffer, mp3_write, 1, mp3);
     } else {
-        puts(mp3_buffer);
+        puts((const char*)mp3_buffer);
     }
     
     /*free buffer*/
@@ -1115,14 +1115,14 @@ void configureMicrophone() {
         char* path;
         
         char *host = argv[1];
-        int channel = atoi(argv[2]);
+        int channel = 1;
         
         if (host == NULL) {
             host = "localhost";
         }
         
-        if (channel == NULL) {
-            channel = 1;
+        if (argv[2] != NULL) {
+            channel = atoi(argv[2]);
         }
         
         lame = lame_init();
