@@ -19,10 +19,7 @@ This project builds a command line tool that connects to a TeamSpeak 3 SDK serve
 
 ### TeamSpeaK SDK
 - Download and unpack the TS SDK
-- cd to the <teamspeak-sdk-dir>/examples/client directory
-- Pick the makefile for your platform and `cp MAKEFILE.macosx MAKEFILE`
-- Run `make`
-- Copy the soundbackends directory into the project (mine was built on a mac YMMV)
+- Find the platform specific library for your machine in the `<teamspeaksdk>/bin` directory and copy it to a library search path such as /usr/local/lib
 
 ### Lame libraries
 - Download lame
@@ -31,4 +28,4 @@ This project builds a command line tool that connects to a TeamSpeak 3 SDK serve
 - Run `make install`
 
 ### TO-DO for Builds
-- Write makefile
+- Write makefile instead of relying on XCode build
