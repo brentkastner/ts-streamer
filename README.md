@@ -1,6 +1,6 @@
 # TS-STREAMER (TeamSpeak 3 Streamer)
 
-This project builds a command line tool that connects to a TeamSpeak 3 SDK server, changes into a specified channel, and begins streaming the audio to STDOUT (default) or an mp3 file.
+This project (based off the client SDK example) builds a command line tool that connects to a TeamSpeak 3 SDK server, changes into a specified channel, and begins streaming the audio to STDOUT (default) or an mp3 file.
 
 ## Usage example:
 `./ts-streamer <server> <channel ID>`
