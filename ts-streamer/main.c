@@ -3,9 +3,7 @@
 //  ts-streamer
 //
 //  Modified by Brent Kastner on 2/26/16.
-//  Copyright © 2016 221AP. All rights reserved.
 //
-
 /*
  * TeamSpeak 3 client sample
  *
