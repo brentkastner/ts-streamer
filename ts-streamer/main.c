@@ -1115,7 +1115,7 @@ void configureMicrophone() {
         char* path;
         
         char *host = argv[1];
-        int *channel = atoi(argv[2]);
+        int channel = atoi(argv[2]);
         
         if (host == NULL) {
             host = "localhost";
