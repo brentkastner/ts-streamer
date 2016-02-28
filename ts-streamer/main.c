@@ -434,7 +434,7 @@ void onEditMixedPlaybackVoiceDataEvent(uint64 serverConnectionHandlerID, short* 
     if (fileMode) {
         fwrite(mp3_buffer, mp3_write, 1, mp3);
     } else {
-        puts((const char*)mp3_buffer);
+        fwrite(mp3_buffer, mp3_write, 1, stdout);
     }
     
     /*free buffer*/
@@ -1127,6 +1127,8 @@ void configureMicrophone() {
         lame_set_in_samplerate(lame, 44100);
         lame_set_VBR(lame, vbr_default);
         lame_init_params(lame);
+        
+        setbuf(stdout, NULL);
         
         /* Create struct for callback function pointers */
         struct ClientUIFunctions funcs;
