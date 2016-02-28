@@ -1,5 +1,7 @@
 .DS_Store
 xcuserdata/
 .Trashes
-
-
+identity.txt
+logs/
+ts-streamer/ts-streamer
+ts-streamer/main.o

@@ -1257,15 +1257,16 @@ void configureMicrophone() {
             printf("Error querying own client ID: %d\n", error);
         }
         
-        
-        if((error = ts3client_requestClientMove(DEFAULT_VIRTUAL_SERVER, clientID, channel, "", NULL)) != ERROR_ok) {
-            printf("Error moving client into channel channel: %d\n", error);
-        }
-        printf("Switching into channel %llu\n\n", (unsigned long long)2);
-        
         printf("filemode is: %d\n", fileMode);
         
         printf("Running lame version %s\n\n", get_lame_version());
+        
+        printf("Switching into channel %llu\n\n", (unsigned long long)2);
+        if((error = ts3client_requestClientMove(DEFAULT_VIRTUAL_SERVER, clientID, channel, "", NULL)) != ERROR_ok) {
+            printf("Error moving client into channel channel: %d\n", error);
+            printf("Exiting");
+            return 0;
+        }
         
         toggleRecordSound(DEFAULT_VIRTUAL_SERVER);
         
