@@ -1,0 +1,271 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84A5C6601C833E7E00B51FA4 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 84A5C65F1C833E7E00B51FA4 /* main.c */; };
+		84A5C66F1C83407200B51FA4 /* libts3client_mac.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A5C66E1C83407200B51FA4 /* libts3client_mac.dylib */; };
+		84A5C6711C83420500B51FA4 /* libmp3lame.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A5C6701C83420500B51FA4 /* libmp3lame.0.dylib */; };
+		84A5C6731C83426400B51FA4 /* soundbackends in Copy Files */ = {isa = PBXBuildFile; fileRef = 84A5C6721C83425100B51FA4 /* soundbackends */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		84A5C65A1C833E7E00B51FA4 /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				84A5C6731C83426400B51FA4 /* soundbackends in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		84A5C65C1C833E7E00B51FA4 /* ts-streamer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ts-streamer"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84A5C65F1C833E7E00B51FA4 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		84A5C66D1C83404400B51FA4 /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; name = include; path = "ts-streamer/include"; sourceTree = "<group>"; };
+		84A5C66E1C83407200B51FA4 /* libts3client_mac.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libts3client_mac.dylib; path = "ts-streamer/include/libts3client_mac.dylib"; sourceTree = "<group>"; };
+		84A5C6701C83420500B51FA4 /* libmp3lame.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmp3lame.0.dylib; path = ../../../../usr/local/lib/libmp3lame.0.dylib; sourceTree = "<group>"; };
+		84A5C6721C83425100B51FA4 /* soundbackends */ = {isa = PBXFileReference; lastKnownFileType = folder; name = soundbackends; path = "ts-streamer/soundbackends"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84A5C6591C833E7E00B51FA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84A5C6711C83420500B51FA4 /* libmp3lame.0.dylib in Frameworks */,
+				84A5C66F1C83407200B51FA4 /* libts3client_mac.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84A5C6531C833E7E00B51FA4 = {
+			isa = PBXGroup;
+			children = (
+				84A5C6721C83425100B51FA4 /* soundbackends */,
+				84A5C6701C83420500B51FA4 /* libmp3lame.0.dylib */,
+				84A5C66E1C83407200B51FA4 /* libts3client_mac.dylib */,
+				84A5C66D1C83404400B51FA4 /* include */,
+				84A5C65E1C833E7E00B51FA4 /* ts-streamer */,
+				84A5C65D1C833E7E00B51FA4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84A5C65D1C833E7E00B51FA4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84A5C65C1C833E7E00B51FA4 /* ts-streamer */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84A5C65E1C833E7E00B51FA4 /* ts-streamer */ = {
+			isa = PBXGroup;
+			children = (
+				84A5C65F1C833E7E00B51FA4 /* main.c */,
+			);
+			path = "ts-streamer";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84A5C65B1C833E7E00B51FA4 /* ts-streamer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84A5C6631C833E7E00B51FA4 /* Build configuration list for PBXNativeTarget "ts-streamer" */;
+			buildPhases = (
+				84A5C6581C833E7E00B51FA4 /* Sources */,
+				84A5C6591C833E7E00B51FA4 /* Frameworks */,
+				84A5C65A1C833E7E00B51FA4 /* Copy Files */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ts-streamer";
+			productName = "ts-streamer";
+			productReference = 84A5C65C1C833E7E00B51FA4 /* ts-streamer */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84A5C6541C833E7E00B51FA4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = 221AP;
+				TargetAttributes = {
+					84A5C65B1C833E7E00B51FA4 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 84A5C6571C833E7E00B51FA4 /* Build configuration list for PBXProject "ts-streamer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 84A5C6531C833E7E00B51FA4;
+			productRefGroup = 84A5C65D1C833E7E00B51FA4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84A5C65B1C833E7E00B51FA4 /* ts-streamer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84A5C6581C833E7E00B51FA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84A5C6601C833E7E00B51FA4 /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		84A5C6611C833E7E00B51FA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		84A5C6621C833E7E00B51FA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		84A5C6641C833E7E00B51FA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = "\"${SRCROOT}/include\"/**";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ts-streamer/include",
+					/usr/local/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		84A5C6651C833E7E00B51FA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = "\"${SRCROOT}/include\"/**";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ts-streamer/include",
+					/usr/local/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84A5C6571C833E7E00B51FA4 /* Build configuration list for PBXProject "ts-streamer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84A5C6611C833E7E00B51FA4 /* Debug */,
+				84A5C6621C833E7E00B51FA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84A5C6631C833E7E00B51FA4 /* Build configuration list for PBXNativeTarget "ts-streamer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84A5C6641C833E7E00B51FA4 /* Debug */,
+				84A5C6651C833E7E00B51FA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84A5C6541C833E7E00B51FA4 /* Project object */;
+}
